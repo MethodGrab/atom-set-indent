@@ -1,4 +1,4 @@
-# atom-set-indent
+# atom-set-indent [![Build Status](https://travis-ci.org/MethodGrab/atom-set-indent.svg?branch=master)](https://travis-ci.org/MethodGrab/atom-set-indent)
 > Set the current editor’s indent type & size from the Atom command panel.
 
 
