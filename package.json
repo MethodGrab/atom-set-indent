@@ -2,7 +2,7 @@
   "name": "set-indent",
   "main": "./lib/set-indent",
   "version": "0.1.0",
-  "description": "Set the current editor’s indent type & size from the Atom command panel",
+  "description": "Quickly change the indent type (tabs or spaces) & size for the current editor from the Atom command panel",
   "keywords": [
     "atom",
     "indent",
