@@ -1,0 +1,171 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Set indent",
+        "submenu": [
+          {
+            "label": "Tabs",
+            "submenu": [
+              {
+                "label": "1 tab",
+                "command": "set-indent:tabs-1"
+              },
+              {
+                "label": "2 tabs",
+                "command": "set-indent:tabs-2"
+              },
+              {
+                "label": "3 tabs",
+                "command": "set-indent:tabs-3"
+              },
+              {
+                "label": "4 tabs",
+                "command": "set-indent:tabs-4"
+              },
+              {
+                "label": "5 tabs",
+                "command": "set-indent:tabs-5"
+              },
+              {
+                "label": "6 tabs",
+                "command": "set-indent:tabs-6"
+              },
+              {
+                "label": "7 tabs",
+                "command": "set-indent:tabs-7"
+              },
+              {
+                "label": "8 tabs",
+                "command": "set-indent:tabs-8"
+              }
+            ]
+          },
+          {
+            "label": "Spaces",
+            "submenu": [
+              {
+                "label": "1 space",
+                "command": "set-indent:spaces-1"
+              },
+              {
+                "label": "2 spaces",
+                "command": "set-indent:spaces-2"
+              },
+              {
+                "label": "3 spaces",
+                "command": "set-indent:spaces-3"
+              },
+              {
+                "label": "4 spaces",
+                "command": "set-indent:spaces-4"
+              },
+              {
+                "label": "5 spaces",
+                "command": "set-indent:spaces-5"
+              },
+              {
+                "label": "6 spaces",
+                "command": "set-indent:spaces-6"
+              },
+              {
+                "label": "7 spaces",
+                "command": "set-indent:spaces-7"
+              },
+              {
+                "label": "8 spaces",
+                "command": "set-indent:spaces-8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Set indent",
+          "submenu": [
+            {
+              "label": "Tabs",
+              "submenu": [
+                {
+                  "label": "1 tab",
+                  "command": "set-indent:tabs-1"
+                },
+                {
+                  "label": "2 tabs",
+                  "command": "set-indent:tabs-2"
+                },
+                {
+                  "label": "3 tabs",
+                  "command": "set-indent:tabs-3"
+                },
+                {
+                  "label": "4 tabs",
+                  "command": "set-indent:tabs-4"
+                },
+                {
+                  "label": "5 tabs",
+                  "command": "set-indent:tabs-5"
+                },
+                {
+                  "label": "6 tabs",
+                  "command": "set-indent:tabs-6"
+                },
+                {
+                  "label": "7 tabs",
+                  "command": "set-indent:tabs-7"
+                },
+                {
+                  "label": "8 tabs",
+                  "command": "set-indent:tabs-8"
+                }
+              ]
+            },
+            {
+              "label": "Spaces",
+              "submenu": [
+                {
+                  "label": "1 space",
+                  "command": "set-indent:spaces-1"
+                },
+                {
+                  "label": "2 spaces",
+                  "command": "set-indent:spaces-2"
+                },
+                {
+                  "label": "3 spaces",
+                  "command": "set-indent:spaces-3"
+                },
+                {
+                  "label": "4 spaces",
+                  "command": "set-indent:spaces-4"
+                },
+                {
+                  "label": "5 spaces",
+                  "command": "set-indent:spaces-5"
+                },
+                {
+                  "label": "6 spaces",
+                  "command": "set-indent:spaces-6"
+                },
+                {
+                  "label": "7 spaces",
+                  "command": "set-indent:spaces-7"
+                },
+                {
+                  "label": "8 spaces",
+                  "command": "set-indent:spaces-8"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
