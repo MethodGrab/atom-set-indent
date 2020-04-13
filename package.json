@@ -16,7 +16,7 @@
     "panel"
   ],
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint \"**/*.js\""
   },
   "activationCommands": {
     "atom-workspace": [
