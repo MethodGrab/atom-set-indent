@@ -208,7 +208,6 @@ describe( 'set-indent', _ => {
 	describe( 'status bar', _ => {
 		const setIndentShowStatusBarDefaultConfig = atom.config.get( 'set-indent.showStatusBar' );
 
-		// TODO: `getSetIndentStatus` can be a bit flaky
 		const getSetIndentStatus = _ => document.querySelector( '.set-indent-status' );
 		const getSetIndentStatusText = _ => getSetIndentStatus().querySelector( 'a' ).textContent;
 
@@ -221,32 +220,17 @@ describe( 'set-indent', _ => {
 			atom.config.set( 'set-indent.showStatusBar', setIndentShowStatusBarDefaultConfig );
 		});
 
-		it( 'shows the current tab style & size in the status bar by default', function() {
-			// TODO: fix flaky test.
-			// This test works fine locally but fails on the CI about 50% of the time.
-			// https://github.com/atom/atom/pull/19135
-			this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+		it( 'shows the current tab style & size in the status bar by default', _ => {
 			expect( getSetIndentStatusText() ).toBe( 'Tabs: 4' );
 		});
 
 		describe( 'when the `showStatusBar` option is disabled', _ => {
-			it( 'shows nothing in the status bar', function() {
-				// TODO: fix flaky test.
-				// This test works fine locally but fails on the CI about 50% of the time.
-				// https://github.com/atom/atom/pull/19135
-				this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+			it( 'shows nothing in the status bar', _ => {
 				atom.config.set( 'set-indent.showStatusBar', false );
 				expect( getSetIndentStatus() ).toBeNull();
 			});
 
-			it( 'still applies the indent config', function() {
-				// TODO: fix flaky test.
-				// This test works fine locally but fails on the CI about 50% of the time.
-				// https://github.com/atom/atom/pull/19135
-				this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+			it( 'still applies the indent config', _ => {
 				atom.config.set( 'set-indent.showStatusBar', false );
 				expect( getSetIndentStatus() ).toBeNull();
 
@@ -262,12 +246,7 @@ describe( 'set-indent', _ => {
 		});
 
 		describe( 'when activated -> deactivated -> activated', _ => {
-			it( 'only shows a single instance', function() {
-				// TODO: fix flaky test.
-				// This test works fine locally but fails on the CI about 50% of the time.
-				// https://github.com/atom/atom/pull/19135
-				this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+			it( 'only shows a single instance', _ => {
 				deactivatePackage();
 
 				runs( _ => {
@@ -283,12 +262,7 @@ describe( 'set-indent', _ => {
 		});
 
 		describe( 'when the tab style or size is changed by the package', _ => {
-			it( 'shows the updated tab style & size (tabs-2)', function() {
-				// TODO: fix flaky test.
-				// This test works fine locally but fails on the CI about 50% of the time.
-				// https://github.com/atom/atom/pull/19135
-				this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+			it( 'shows the updated tab style & size (tabs-2)', _ => {
 				atom.commands.dispatch( workspaceElement, 'set-indent:tabs-2' );
 				waitsForPromise( _ => atom.views.getNextUpdatePromise() );
 
@@ -297,12 +271,7 @@ describe( 'set-indent', _ => {
 				});
 			});
 
-			it( 'shows the updated tab style & size (spaces-2)', function() {
-				// TODO: fix flaky test.
-				// This test works fine locally but fails on the CI about 50% of the time.
-				// https://github.com/atom/atom/pull/19135
-				this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+			it( 'shows the updated tab style & size (spaces-2)', _ => {
 				atom.commands.dispatch( workspaceElement, 'set-indent:spaces-2' );
 				waitsForPromise( _ => atom.views.getNextUpdatePromise() );
 
@@ -313,12 +282,7 @@ describe( 'set-indent', _ => {
 		});
 
 		describe( 'when the active editor is changed', _ => {
-			it( 'shows the updated tab style & size', function() {
-				// TODO: fix flaky test.
-				// This test works fine locally but fails on the CI about 50% of the time.
-				// https://github.com/atom/atom/pull/19135
-				this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+			it( 'shows the updated tab style & size', _ => {
 				assertDefaultState( editor );
 				expect( getSetIndentStatusText() ).toBe( 'Tabs: 4' );
 
@@ -332,12 +296,7 @@ describe( 'set-indent', _ => {
 		});
 
 		describe( 'when clicked', _ => {
-			it( 'triggers the `set-indent:show` command', function() {
-				// TODO: fix flaky test.
-				// This test works fine locally but fails on the CI about 50% of the time.
-				// https://github.com/atom/atom/pull/19135
-				this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+			it( 'triggers the `set-indent:show` command', _ => {
 				const eventHandler = jasmine.createSpy( 'eventHandler' );
 				atom.commands.add( 'atom-text-editor', 'set-indent:show', eventHandler );
 
@@ -348,12 +307,7 @@ describe( 'set-indent', _ => {
 		});
 
 		describe( 'when the package is deactivated', _ => {
-			it( 'is removed from the view', function() {
-				// TODO: fix flaky test.
-				// This test works fine locally but fails on the CI about 50% of the time.
-				// https://github.com/atom/atom/pull/19135
-				this.RETRY_FLAKY_TEST_AND_SLOW_DOWN_THE_BUILD(); // eslint-disable-line no-invalid-this
-
+			it( 'is removed from the view', _ => {
 				deactivatePackage();
 
 				runs( _ => {
