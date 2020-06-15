@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "set-indent",
   "main": "./lib/set-indent",
   "version": "0.1.1",
@@ -19,34 +20,24 @@
     "test": "npm run lint && apm test",
     "lint": "eslint \"**/*.js\""
   },
-  "activationCommands": {
-    "atom-workspace": [
-      "set-indent:tabs-1",
-      "set-indent:tabs-2",
-      "set-indent:tabs-3",
-      "set-indent:tabs-4",
-      "set-indent:tabs-5",
-      "set-indent:tabs-6",
-      "set-indent:tabs-7",
-      "set-indent:tabs-8",
-      "set-indent:spaces-1",
-      "set-indent:spaces-2",
-      "set-indent:spaces-3",
-      "set-indent:spaces-4",
-      "set-indent:spaces-5",
-      "set-indent:spaces-6",
-      "set-indent:spaces-7",
-      "set-indent:spaces-8"
-    ]
-  },
   "repository": "https://github.com/MethodGrab/atom-set-indent",
   "license": "ISC",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "atom-select-list": "^0.7.2"
+  },
   "devDependencies": {
     "@methodgrab/eslint-config-standard": "^0.10.0",
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "is-ci": "^2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
   }
 }
